@@ -12,17 +12,15 @@ h1 {
     letter-spacing: -0.004em;
     color: #75B79E;
     margin-bottom: 45px;
-    
 }
 
 .fundo {
-width: 100%;
-display: flex;
-flex-direction: column; 
-justify-content: center;
-align-items: center;
-margin-top: 40px;
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .tabuleiro {
@@ -31,7 +29,6 @@ margin-top: 40px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .seletor {
@@ -44,6 +41,13 @@ margin-top: 40px;
 .carta {
     width: 117px;
     height: 146px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
     background: #A7E9AF;
     border: 1px solid #99CEA8;
     box-sizing: border-box;
@@ -51,11 +55,26 @@ margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
-
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
 }
 
-.topo-carta img{
+.carta img {
     width: 100px;
     height: 100px;
+}
+
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.virar {
+    transform: rotateY(-180deg);
+}
+
+.desvirar {
+    transform: rotateY(0deg);
 }
