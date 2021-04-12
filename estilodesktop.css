@@ -66,7 +66,6 @@ h1 {
     height: 100px;
 }
 
-
 .back-face {
     transform: rotateY(180deg);
 }
@@ -77,4 +76,25 @@ h1 {
 
 .desvirar {
     transform: rotateY(0deg);
+}
+
+.relogio {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 50px;
+    margin-top: 30px;
+    background: cadetblue;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
 }

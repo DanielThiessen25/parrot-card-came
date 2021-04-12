@@ -119,9 +119,23 @@ function checagem(numero){
 }
 
 function finalizar(){
-    var mensagem = "FIM DE JOGO! VOCÊ GANHOU EM" + jogadas +" JOGADAS!";
+    var mensagem = "FIM DE JOGO! VOCÊ GANHOU EM " + jogadas +" JOGADAS E EM UM TOTAL DE " + segundos + " SEGUNDOS!!";
     alert(mensagem);
+    clearInterval(relogio);
+    FIM = true;
 }
 
 adicionarCartas();
 
+let FIM = false;
+var segundos = 1;
+const relogio = setInterval(temporizador, 1000);
+
+
+function temporizador(){
+    if(FIM == false){
+    const elemento = document.querySelector(".relogio");
+    elemento.innerHTML = segundos;
+    segundos ++;
+}
+}
